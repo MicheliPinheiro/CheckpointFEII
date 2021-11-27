@@ -5,13 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de interesse</title>
+    <style type="text/css">
+        .cabecalho {
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
-    
+    <div class="cabecalho">
+        <hi><strong>Deixe-nos saber o que você deseja conhecer em Salvador!</strong></hi>
+        <section class="resumo"><p>O centro histórico de Salvador, com suas ruas de casas coloridas e igrejas antigas, foi declarado Patrimônio Mundial pela Unesco em 1985. Há muito o que fazer em Salvador, mas são imperdíveis a visita à Igreja e Convento de São Francisco e à Igreja de Nosso Senhor do Bonfim, além, é claro, da praia do Farol da Barra – todos esses destaques estão abertos à visitação, respeitando os protocolos de segurança como o distanciamento e o uso obrigatório de máscara.<br>
+            Em relação às praias de Salvador, está permitida a permanência em diversas praias de segunda à sexta, assim como o aluguel de guarda-sol e o comércio de bebidas e comidas. <br>
+            De qualquer forma, se você pretende viajar agora, indicamos que você confira sites oficiais do governo para saber as últimas atualizações em relação ao coronavírus e entender o que está aberto à visitação em Salvador nesse momento 🙂</p>
+        </section>
+    <main>
+        <form action="pesquisa" method="POST">
+            <p>
+                <label for="usuário"> Nome:</label>
+                <input type="text" name="usuário" id="usuário"> 
+            </p>
+            <p>
+                <label for="email"> Email:</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="telefone"> Telefone:</label>
+                <input type="number" name="telefone" id="telefone">
+            </p>
+            <p>
+                <label for="dataNascimento"> Data de Nascimento:</label>
+                <input type="date" name="dataNascimento" id="dataNascimento">
+            </p>
+            <p>
+                <label>Sou</label>
+                <input type="radio" id="maiorDeIdade" name="maioridade" value="maiorDeIdade">
+                <label for="maiorDeIdade">Maior de Idade</label><br>
+                <input type="radio" id="menorIdade" name="maioridade" value="menorIdade">
+                <label for="menorIdade">Menor de Idade</label><br>
+            </p>
+            <p>
+                <label>Sobre os pontos turísticos da cidade de Salvador, você se interessa por:</label>
+                <select name="pontosTuristicos">
+                <option value="farolDaBarra">Farol da Barra</option>
+                <option value="mercadoModelo">Mercado Modelo</option>
+                <option value="museuDeArteModerna">Museu de Arte Moderna</option>
+                <option value="pelourinho">Pelourinho</option>
+                <option value="praiaDeStellaMaris">Praia de Stella Maris</option>
+                <option value="praiaDeVillas">Praia de Villas</option>
+                <option value="praiaDoFlamengo">Praia do Flamengo</option>
+                <option value="praiaDoForte">Praia do Forte</option>
+                <option value="praiaDoPortoDaBarra">Praia do Porto da Barra</option>
+                </select>
+            </p>
+            <p>
+                <label>Qual será a sua atividade quando estiver em Salvador?</label><br>
+                <input type="checkbox" id="tipoInteresse1" name="tipoInteresse1" value="Turista">
+                <label for="tipoInteresse1">Estarei na cidade como Turista</label><br>
+                <input type="checkbox" id="tipoInteresse2" name="tipoInteresse2" value="Residente">
+                <label for="tipoInteresse2">Estarei na cidade como Residente</label><br>
+                <input type="checkbox" id="tipoInteresse3" name="tipoInteresse3" value="Estudante">
+                <label for="tipoInteresse3">Estarei na cidade como Estudante</label><br>
+            </p>
+        </form>
+    </main>
+    </div>
+    <div class="rodape">
+        <p>
+            <button type="reset">Limpar preenchimento</button>
+            <button type="submit">Enviar</button>
+        </p>
+    </div>
 </body>
 </html>
 
-- O formulário de cadastro deve ter no mínimo os inputs: 
+<!-- O formulário de cadastro deve ter no mínimo os inputs: 
 Nome (com no máximo 100 caracteres)
 Email
 Telefone (apenas números)
@@ -23,4 +91,4 @@ Note que o usuário pode escolher nenhum ou mais que um.
 O formulário deve ter um botão para enviar e um botão para resetar os dados digitados.
 O formulário deve ter uma animação onde quando o usuário passa o cursor do mouse sobre o campo e o campo aumenta de tamanho. 
 Você tem total liberdade para animar e colorir o seu formulário, então use e abuse da sua criatividade
-Suba o trabalho no Github e no GitPages ou no Replit e envie o link pelo formulário a seguir ATÉ 29/11 23:59:  Link do Formulário de Entrega
+Suba o trabalho no Github e no GitPages ou no Replit e envie o link pelo formulário a seguir ATÉ 29/11 23:59:  Link do Formulário de Entrega -->
