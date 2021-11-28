@@ -148,18 +148,22 @@
             <p>
                 <label for="usuário"> Nome:</label>
                 <input type="text" name="usuário" id="usuário" placeholder="Digite seu nome" class="anime" required maxlength="100"> 
+                <!-- Tipo: Texto / Preenchimento: Obrigatorio / Limite de Caracter: 100 -->
             </p>
             <p>
                 <label for="email"> Email:</label>
                 <input type="email" name="email" id="email" placeholder="Digite seu email" class="anime" required>
+                <!-- Tipo: Email / Preenchimento: Obrigatorio -->
             </p>
             <p>
                 <label for="telefone"> Telefone:</label>
-                <input type="text" pattern="[0-9]+" title="Apenas números" name="telefone" id="telefone" class="anime" placeholder="Digite seu telefone" required>                
+                <input type="text" pattern="[0-9]+" title="Apenas números" name="telefone" id="telefone" class="anime" placeholder="Digite seu telefone" required>
+                <!-- Tipo: Texto / Preenchimento: Obrigatorio / Permitido apenas número utilizando pattern -->
             </p>
             <p>
                 <label for="dataNascimento"> Data de Nascimento:</label>
                 <input type="date" name="dataNascimento" id="dataNascimento" class="anime" required>
+                <!-- Tipo: Data / Preenchimento: Obrigatorio -->
             </p>
             <p class="radio">
                 <label>Sou: </label>
@@ -167,6 +171,7 @@
                 <label for="maiorDeIdade">Maior de Idade</label>
                 <input type="radio" id="menorIdade" name="maioridade" value="menorIdade">
                 <label for="menorIdade">Menor de Idade</label><br>
+                <!-- Radio -->
             </p>
             <p>
                 <label>Sobre os pontos turísticos da cidade de Salvador, você se interessa por:</label>
@@ -180,6 +185,7 @@
                     <option value="praiaDeVillas">Praia de Villas</option>
                     <option value="praiaDoFlamengo">Praia do Flamengo</option>
                     <option value="praiaDoForte">Praia do Forte</option>
+                    <!-- Select -->
                 </select>
             </p>
             <p>
@@ -190,10 +196,13 @@
                 <label for="tipoInteresse2">Estarei na cidade como Residente</label><br>
                 <input type="checkbox" id="tipoInteresse3" name="tipoInteresse3" value="Estudante">
                 <label for="tipoInteresse3">Estarei na cidade como Estudante</label><br>
+                <!-- Checkbox  -->
             </p>
             <p class="buttons">
                 <button class="button" type="reset">Limpar preenchimento</button>
+                <!-- Botão para Limpar -->
                 <button class="button" type="submit">Enviar</button>
+                <!-- Botão para Enviar -->
             </p>
         </form>
     </main>
@@ -212,7 +221,9 @@
         
         <a href="https://web.facebook.com/prefsalvador/" target="_blank">
             <img src="imagens/facebook.png" class="icones">
-        </a>  
+        </a> 
+        
+        <!-- Links para redes sociais -->
     </footer>
 </body>
 </html>
