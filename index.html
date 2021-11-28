@@ -23,19 +23,19 @@
         <form action="pesquisa" method="POST">
             <p>
                 <label for="usuário"> Nome:</label>
-                <input type="text" name="usuário" id="usuário"> 
+                <input type="text" name="usuário" id="usuário" placeholder="Digite seu nome" required="required" maxlength="100"> 
             </p>
             <p>
                 <label for="email"> Email:</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required="required">
             </p>
             <p>
                 <label for="telefone"> Telefone:</label>
-                <input type="number" name="telefone" id="telefone">
+                <input type="number" name="telefone" id="telefone" placeholder="Digite seu telefone" required="required" number>
             </p>
             <p>
                 <label for="dataNascimento"> Data de Nascimento:</label>
-                <input type="date" name="dataNascimento" id="dataNascimento">
+                <input type="date" name="dataNascimento" id="dataNascimento" required="re'">
             </p>
             <p>
                 <label>Sou</label>
@@ -67,14 +67,19 @@
                 <input type="checkbox" id="tipoInteresse3" name="tipoInteresse3" value="Estudante">
                 <label for="tipoInteresse3">Estarei na cidade como Estudante</label><br>
             </p>
+            <p class="buttons">
+                <button type="reset">Limpar preenchimento</button>
+                <button type="submit">Enviar</button>
+            </p>
         </form>
     </main>
     </div>
-    <div class="rodape">
+<!-- se colocar aqui os botões não funciona, subir eles para 
+ <div class="rodape">
         <p>
             <button type="reset">Limpar preenchimento</button>
             <button type="submit">Enviar</button>
-        </p>
+        </p> -->
     </div>
 </body>
 </html>
