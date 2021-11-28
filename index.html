@@ -5,48 +5,164 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de interesse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
     <style type="text/css">
-        .cabecalho {
+       
+       * {
+            box-sizing: border-box;            
+        }
+
+        body {
+            background-image: url("imagens/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Mali', cursive, Arial, Helvetica, sans-serif;
+        }
+       
+       .corpo__geral {
             text-align: center;
         }
+
+        h1{
+            margin: 0 auto;
+            padding: 0px;
+        }
+
+        .cabecalho__corpo {
+            background-color: rgba(29, 123, 211, 0.281);
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 200px, bold;            
+            padding: 10px;
+            width: 1500px;
+            margin-top: -8px;
+            margin-left: -8px;            
+        }
+
+        .resumo__corpo{
+            font-size: 14px;
+            line-height: 20px;
+            margin:0 auto;
+            text-align: justify;
+            width: 900px;
+        }
+        
+        .rodape {
+            text-align: center;
+            padding: 0px;
+        }
+
+        .icones {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .rodape__titulo{
+            font-style: bold;
+        }
+        
+        @keyframes foraDentro {
+            25%{
+                transform: scale(1.1)
+            }
+            75%{
+                transform: scale(0.9)
+            }
+        }
+
+        .icones:hover{
+            animation: foraDentro;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        input[type="radio"]{
+            display: inline-block;
+            text-align: center;
+            margin-top: 1px;
+        }
+        
+        .button {
+            background-color: white;
+            border: 2px solid rgba(29, 123, 211, 0.281);
+            border-radius:12px;
+            color: black;
+            display: inline-block;
+            font-size: 15px;
+            padding: 10px;
+            text-align: center;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            margin-bottom: 0px;
+            font-family: 'Mali', cursive, Arial, Helvetica, sans-serif;
+        }
+        
+        .button:hover {
+            background-color: rgba(29, 123, 211, 0.568);
+            color: white;
+        }
+        
+        /* Animação das caixas. */
+        .anime:hover{            
+            animation: direitaEsquerda;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            transform: scale(1.1) translate(10px,0px);
+        }
+
+        #tipoInteresse1{
+            position: relative;
+            left: -11px;
+        }
+
+        .turista{
+            position: relative;
+            right: 11px;
+        }           
     </style>
 
 </head>
 <body>
-    <div class="cabecalho">
-        <hi><strong>Deixe-nos saber o que você deseja conhecer em Salvador!</strong></hi>
-        <section class="resumo"><p>O centro histórico de Salvador, com suas ruas de casas coloridas e igrejas antigas, foi declarado Patrimônio Mundial pela Unesco em 1985. Há muito o que fazer em Salvador, mas são imperdíveis a visita à Igreja e Convento de São Francisco e à Igreja de Nosso Senhor do Bonfim, além, é claro, da praia do Farol da Barra – todos esses destaques estão abertos à visitação, respeitando os protocolos de segurança como o distanciamento e o uso obrigatório de máscara.<br>
-            Em relação às praias de Salvador, está permitida a permanência em diversas praias de segunda à sexta, assim como o aluguel de guarda-sol e o comércio de bebidas e comidas. <br>
-            De qualquer forma, se você pretende viajar agora, indicamos que você confira sites oficiais do governo para saber as últimas atualizações em relação ao coronavírus e entender o que está aberto à visitação em Salvador nesse momento 🙂</p>
+    <div class="corpo__geral">
+        <h1 class="cabecalho__corpo"><strong>Deixe-nos saber o que você deseja conhecer em Salvador!</strong></h1>
+        <section class="resumo__corpo"><p>O centro histórico de Salvador, com suas ruas de casas coloridas e igrejas antigas, foi declarado Patrimônio Mundial pela Unesco em 1985. Há muito o que fazer em Salvador, mas são imperdíveis a visita à Igreja e Convento de São Francisco e à Igreja de Nosso Senhor do Bonfim, além, é claro, da praia do Farol da Barra – todos esses destaques estão abertos à visitação, respeitando os protocolos de segurança como o distanciamento e o uso obrigatório de máscara.<br>
+        Em relação às praias de Salvador, está permitida a permanência em diversas praias de segunda à sexta, assim como o aluguel de guarda-sol e o comércio de bebidas e comidas. <br>
+        De qualquer forma, se você pretende viajar agora, indicamos que você confira sites oficiais do governo para saber as últimas atualizações em relação ao coronavírus e entender o que está aberto à visitação em Salvador nesse momento 🙂</p>
         </section>
     <main>
-        <form action="pesquisa" method="POST">
+        <form action="/processadadosform" method="post">
             <p>
                 <label for="usuário"> Nome:</label>
-                <input type="text" name="usuário" id="usuário" placeholder="Digite seu nome" required="required" maxlength="100"> 
+                <input type="text" name="usuário" id="usuário" placeholder="Digite seu nome" class="anime" required maxlength="100"> 
             </p>
             <p>
                 <label for="email"> Email:</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu email" required="required">
+                <input type="email" name="email" id="email" placeholder="Digite seu email" class="anime" required>
             </p>
             <p>
                 <label for="telefone"> Telefone:</label>
-                <input type="number" name="telefone" id="telefone" placeholder="Digite seu telefone" required="required" number>
+                <input type="text" pattern="[0-9]+" title="Apenas números" name="telefone" id="telefone" class="anime" placeholder="Digite seu telefone" required>                
             </p>
             <p>
                 <label for="dataNascimento"> Data de Nascimento:</label>
-                <input type="date" name="dataNascimento" id="dataNascimento" required="re'">
+                <input type="date" name="dataNascimento" id="dataNascimento" class="anime" required>
             </p>
-            <p>
-                <label>Sou</label>
+            <p class="radio">
+                <label>Sou: </label>
                 <input type="radio" id="maiorDeIdade" name="maioridade" value="maiorDeIdade">
-                <label for="maiorDeIdade">Maior de Idade</label><br>
+                <label for="maiorDeIdade">Maior de Idade</label>
                 <input type="radio" id="menorIdade" name="maioridade" value="menorIdade">
                 <label for="menorIdade">Menor de Idade</label><br>
             </p>
             <p>
                 <label>Sobre os pontos turísticos da cidade de Salvador, você se interessa por:</label>
                 <select name="pontosTuristicos">
+                <option value="" selected>Selecione um Ponto Turístico</option>    
                 <option value="farolDaBarra">Farol da Barra</option>
                 <option value="mercadoModelo">Mercado Modelo</option>
                 <option value="museuDeArteModerna">Museu de Arte Moderna</option>
@@ -55,45 +171,44 @@
                 <option value="praiaDeVillas">Praia de Villas</option>
                 <option value="praiaDoFlamengo">Praia do Flamengo</option>
                 <option value="praiaDoForte">Praia do Forte</option>
-                <option value="praiaDoPortoDaBarra">Praia do Porto da Barra</option>
+                
                 </select>
             </p>
             <p>
                 <label>Qual será a sua atividade quando estiver em Salvador?</label><br>
                 <input type="checkbox" id="tipoInteresse1" name="tipoInteresse1" value="Turista">
-                <label for="tipoInteresse1">Estarei na cidade como Turista</label><br>
+                <label class="turista" for="tipoInteresse1">Estarei na cidade como Turista</label><br>
                 <input type="checkbox" id="tipoInteresse2" name="tipoInteresse2" value="Residente">
                 <label for="tipoInteresse2">Estarei na cidade como Residente</label><br>
                 <input type="checkbox" id="tipoInteresse3" name="tipoInteresse3" value="Estudante">
                 <label for="tipoInteresse3">Estarei na cidade como Estudante</label><br>
             </p>
             <p class="buttons">
-                <button type="reset">Limpar preenchimento</button>
-                <button type="submit">Enviar</button>
+                <button class="button" type="reset">Limpar preenchimento</button>
+                <button class="button" type="submit">Enviar</button>
             </p>
         </form>
     </main>
     </div>
-<!-- se colocar aqui os botões não funciona, subir eles para 
- <div class="rodape">
-        <p>
-            <button type="reset">Limpar preenchimento</button>
-            <button type="submit">Enviar</button>
-        </p> -->
-    </div>
+ <footer class="rodape">
+     <p class="rodape__titulo">Visite nossas redes sociais</p>
+       <a href="https://www.instagram.com/prefsalvador/?hl=pt-br" target="_blank"><img src="imagens/instagram.png" class="icones"></a>
+       <a href="https://www.youtube.com/c/PrefeituradoSalvadorOficial" target="_blank"><img src="imagens/youtube.png" class="icones"></a>
+       <a href="https://web.facebook.com/prefsalvador/" target="_blank"><img src="imagens/facebook.png" class="icones"></a>  
+</footer>
 </body>
 </html>
 
 <!-- O formulário de cadastro deve ter no mínimo os inputs: 
-Nome (com no máximo 100 caracteres)
-Email
-Telefone (apenas números)
-Data de nascimento (data)
-Se é maior ou menor de idade (deve ter as duas opções, podendo marcar apenas uma delas).
-Um campo que permita que o usuário selecione um ponto de interesse na sua cidade. (De uma lista de no mínimo 3).
-Um campo opcional onde o usuário poderá dizer quais seus interesses na cidade: Turista, Residente e Estudante.
-Note que o usuário pode escolher nenhum ou mais que um.
-O formulário deve ter um botão para enviar e um botão para resetar os dados digitados.
-O formulário deve ter uma animação onde quando o usuário passa o cursor do mouse sobre o campo e o campo aumenta de tamanho. 
+ok - Nome (com no máximo 100 caracteres)
+ok - Email
+ok - Telefone (apenas números)
+ok - Data de nascimento (data)
+ok - Se é maior ou menor de idade (deve ter as duas opções, podendo marcar apenas uma delas).
+ok - Um campo que permita que o usuário selecione um ponto de interesse na sua cidade. (De uma lista de no mínimo 3).
+ok - Um campo opcional onde o usuário poderá dizer quais seus interesses na cidade: Turista, Residente e Estudante.
+ok - Note que o usuário pode escolher nenhum ou mais que um.
+ok - O formulário deve ter um botão para enviar e um botão para resetar os dados digitados.
+ok - O formulário deve ter uma animação onde quando o usuário passa o cursor do mouse sobre o campo e o campo aumenta de tamanho. 
 Você tem total liberdade para animar e colorir o seu formulário, então use e abuse da sua criatividade
 Suba o trabalho no Github e no GitPages ou no Replit e envie o link pelo formulário a seguir ATÉ 29/11 23:59:  Link do Formulário de Entrega -->
